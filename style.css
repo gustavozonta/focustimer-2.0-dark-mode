@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --bg-color-light: #FFFFFF;
+  --text-color-light: #323238;
+  --icon-base-color-light: #E1E1E6;
+
+  --bg-color-dark: #000000;
+  --text-color-dark: #FFFFFF;
+  --icon-base-color-dark: #C4C4CC;
+  --icon-color-dark: #29292E; 
+  --icon-color-dark-blue: #02799D;
+}
+
+body {
+  background: var(--bg-color-light);
+  color: var(--text-color-light);
+  font-family: 'Roboto', sans-serif;
+}
+
+.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#change-theme {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+}
+
+.moon {
+  color: var(--bg-color)
+}
+
+.hide {
+  display: none;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  margin-right: 19rem;
+}
+
+#timer {
+  display: flex;
+  font-size: 12.5rem;
+  margin-bottom: 4.8rem;
+  cursor: pointer;
+}
+
+#controls {
+  display: flex;
+  gap: 4rem;
+  margin-right: 4rem; 
+}
+
+.dark-mode .play path,
+.dark-mode .stop path,
+.dark-mode .plusfive path,
+.dark-mode .minusfive path {
+  fill: var(--icon-base-color-dark);
+}
+
+.play:hover path, 
+.stop:hover path,
+.plusfive:hover path,
+.minusfive:hover path {
+  fill: var(--icon-color-dark-blue)
+}
+
+.dark-mode .play:hover path, 
+.dark-mode .stop:hover path,
+.dark-mode .plusfive:hover path,
+.dark-mode .minusfive:hover path {
+  fill: var(--icon-color-dark-blue)
+}
+
+#soundcard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.8rem;
+}
+
+.dark-mode .forest .path-1,
+.dark-mode .rain .path-1,
+.dark-mode .coffeeshop .path-1,
+.dark-mode .fireplace .path-1 {
+  fill: var(--icon-color-dark);
+}
+
+
+.dark-mode .forest .path-2,
+.dark-mode .rain .path-2,
+.dark-mode .coffeeshop .path-2,
+.dark-mode .fireplace .path-2 {
+  fill: var(--icon-base-color-dark)
+}
+
+input {
+  display: block;
+  position: relative;
+  left: 2rem;
+  bottom: 4rem;
+  appearance: none;
+  background-color: white;
+  height: 0.5rem;
+  width: 9rem;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  height: 1.6rem;
+  width: 1.6rem;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border-radius: 9999rem;
+  background-color: white
+}
+
+.dark-mode input,
+.dark-mode input[type=range]::-webkit-slider-thumb {
+  background-color: white;
+}
+
+.btn.active .path-1 {
+  fill: var(--icon-color-dark-blue);
+}
+
+.btn.active .path-2 {
+  fill: var(--bg-color-light)
+}
+
+.vol-input.active {
+  background-color: #29292E;
+}
+
+.vol-input.active::-webkit-slider-thumb {
+  background-color: #29292E;
+}
+
+.dark-mode .vol-input.active {
+  background-color: white;
+}
+
+
+@media only screen and (max-width: 870px) {
+  main {
+    flex-direction: column;
+  }
+
+   #changebg {
+    top: auto;
+    bottom: 2rem;
+    right: 2rem;
+  }
+  
+  .container {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+  
+  #timer {
+    justify-content: center;
+    font-size: 10rem;
+  }
+  
+  #controls {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+  }
+}
