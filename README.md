@@ -48,7 +48,7 @@ This project is above the MIT license.
 
 ## link
 
-<a href="https://gustavozonta.github.io/focustimer-2.0-dark/" target="_blank"> Focus Timer 2.0 - Dark Mode</a>
+<a href="https://gustavozonta.github.io/focustimer-2.0-dark-mode/" target="_blank"> Focus Timer 2.0 - Dark Mode</a>
 
 ---
 <p align="center"> Made  ♥  by Gustavo Zonta</p>
